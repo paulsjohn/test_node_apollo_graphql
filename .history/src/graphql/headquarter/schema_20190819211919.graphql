@@ -1,0 +1,23 @@
+type Headquarter {
+  id: Int
+  name: String,
+  status: Boolean
+}
+
+input HeadquarterInput {
+  name: String,
+  status: Boolean
+}
+
+input HeadquarterWhere {
+  id: Int
+}
+
+type Query {
+   Headquarter(where: HeadquarterWhere): Headquarter
+   Headquarters(where: HeadquarterWhere, limit: Int, offset: Int): [Headquarter]
+}
+
+type Mutation {
+   Headquarter(data: Headquarter): HeadquarterInput
+}

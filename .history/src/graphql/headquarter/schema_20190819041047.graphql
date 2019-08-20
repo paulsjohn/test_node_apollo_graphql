@@ -1,0 +1,12 @@
+type Headquarter {
+  id: Int
+  name: String
+}
+
+input HeadquarterWhere {
+  id: Int
+}
+
+type Query {
+   getCompany(where: HeadquarterWhere, limit: Int, offset: Int): Headquarter
+}

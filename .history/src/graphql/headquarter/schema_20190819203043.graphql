@@ -1,0 +1,17 @@
+type Headquarter {
+  id: Int
+  name: String,
+  status: Boolean
+}
+
+input HeadquarterWhere {
+  id: Int
+}
+
+type Query {
+   getHeadquarter(where: HeadquarterWhere, limit: Int, offset: Int): Headquarter
+}
+
+type Query {
+   getHeadquarters(where: HeadquarterWhere, limit: Int, offset: Int): [Headquarter]
+}
